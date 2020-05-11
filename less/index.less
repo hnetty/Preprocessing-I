@@ -23,11 +23,28 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	font-family: monospace;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
+}
+
+@main-color: #295D82;
+
+.border(){
+	border: 1px solid @main-color;
+}
+
+.backgroundFormat(){
+	background-color: lightgray;
+	padding:3%;
+	margin:3%;
+}
+
+*{
+	box-sizing: border-box;
 }
 body {
 	line-height: 1;
@@ -54,6 +71,122 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	
+}
+img{
+	max-width: 100%;
+}
+
+.headerContent{
+	
+	justify-content: space-evenly;
+	align-items: center;
+	display:flex;
+	.backgroundFormat();
+	.border();
+
+		@media(max-width:550px){
+			flex-direction: column;
+		}
+		h1{
+			color: white;
+			font-size: 4rem;
+		}
+		a{
+			color:@main-color;
+			
+		}
+		div{
+			padding:2%;
+		}
+		
+}
+
+.introContent{
+	justify-content: center;
+	align-items: center;
+	display:flex;
+	.backgroundFormat();
+	.border();
+
+		@media(max-width:550px){
+			flex-direction: column;
+		}
+		div{
+			padding:3%;
+		}
+		h3{
+			font-size: 3rem;
+			padding:2%;
+			color:@main-color;
+		}
+		a, p{
+			font-size: 1.25rem;
+		}	
+}
+
+.container{
+	max-width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.mainContent{
+	justify-content:space-evenly;
+	display:flex;
+	flex-flow:column;
+	.backgroundFormat();
+	.border();
+
+		@media(max-width:550px){
+			flex-direction: column;
+		}
+
+		div{
+			padding:3%;
+		}
+
+		h2{
+			font-size:2.5rem;
+			color:@main-color;
+			
+		}
+
+		h3{
+			font-size: 2rem;
+		}
+		h5{
+			font-size: 1.5rem;
+			color:white;
+		}
+}
+
+.skillsContent{
+
+	justify-content: center;
+	align-items: center;
+	display:flex;
+	.backgroundFormat();
+	.border();
+
+		@media(max-width:550px){
+			flex-direction: column;
+		}
+
+		div{
+			padding:3%;
+		}
+		h4{
+			font-size: 2rem;
+			padding:2%;
+			color:@main-color;
+		}
+		a, p{
+			font-size: 1.25rem;
+		}	
+
+
 }
 
